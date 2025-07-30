@@ -2,41 +2,42 @@
 
 export default function CTASection() {
     return (
-        <section className="relative w-full bg-white px-20 py-20">
+        <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
             <div className="mx-auto max-w-[1320px]">
                 {/* CTA Card */}
-                <div className="rounded-3xl p-16" style={{ background: 'linear-gradient(180deg, #1F2964 0%, #3F53CA 100%)' }}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="rounded-2xl md:rounded-3xl p-8 md:p-12 lg:p-16" style={{ background: 'linear-gradient(180deg, #1F2964 0%, #3F53CA 100%)' }}>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center text-center lg:text-left">
                         {/* Left Column: Main Heading */}
                         <div>
-                            <h2 className="text-4xl font-medium text-white leading-tight">
-                                Still Not Sure Which LED<br />
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
+                                Still Not Sure Which LED<br className="hidden sm:block" />
                                 Display is Right for You?
                             </h2>
                         </div>
 
                         {/* Right Column: Description Text */}
                         <div>
-                            <p className="text-white text-xl leading-relaxed mb-8">
+                            <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8">
                                 Talk to our experts for personalized recommendations based on your event, space, and audience needs.
                             </p>
                         </div>
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 mt-12">
+                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 md:mt-10 lg:mt-12">
                         <div className="flex-1">
-                            <button className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-12 py-6 rounded-2xl font-medium text-2xl hover:bg-gray-50 transition-all duration-300 group">
+                            <button className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-6 md:px-8 lg:px-12 py-4 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group">
                                 <span>Request a Quote</span>
-                                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </button>
                         </div>
                         <div className="flex-1">
-                            <button className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-12 py-6 rounded-2xl font-medium text-2xl hover:bg-gray-50 transition-all duration-300 group">
-                                <span>Get a Free Consultation</span>
-                                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-6 md:px-8 lg:px-12 py-4 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group">
+                                <span className="hidden sm:inline">Get a Free Consultation</span>
+                                <span className="sm:hidden">Free Consultation</span>
+                                <svg className="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </button>

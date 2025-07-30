@@ -7,6 +7,7 @@ import CTASection from "./CTASection"
 import OurWork from "./OurWork"
 import Testimonial from "./Testimonial"
 import FinalCTA from "./FinalCTA"
+import Contact from "./Contact" 
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <OurWork />
             <Testimonial />
             <FinalCTA />
+            <Contact />
         </main>
     )
 }
