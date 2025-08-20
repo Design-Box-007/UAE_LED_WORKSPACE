@@ -49,7 +49,7 @@ export default function Testimonial() {
 
                         {/* Testimonial Quote */}
                         <blockquote className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                            "LED Display UAE helped us pull off a spectacular event with a custom LED arch and stage wall. Their execution was flawless and on time."
+                            ’’LED Display UAE helped us pull off a spectacular event with a custom LED arch and stage wall. Their execution was flawless and on time.’’
                         </blockquote>
 
                         {/* Background Image */}

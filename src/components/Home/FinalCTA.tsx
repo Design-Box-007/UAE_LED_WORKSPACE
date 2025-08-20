@@ -10,7 +10,7 @@ export default function FinalCTA() {
                         {/* Left Column: Main Heading */}
                         <div>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
-                                Let's Light Up<br className="hidden sm:block" />
+                                Let’s Light Up<br className="hidden sm:block" />
                                 Your Next<br className="hidden sm:block" />
                                 Experience
                             </h2>

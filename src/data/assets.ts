@@ -6,6 +6,7 @@ const images = {
     img3: "/images/about-us/about-us-3.png",
     img4: "/images/about-us/about-us-4.png",
     img5: "/images/about-us/about-us-5.png",
+    logo: "/images/about-us/logo.png"
   },
   blog: {
     base: "/images/blog",

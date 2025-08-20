@@ -10,14 +10,14 @@ export default function Contact() {
                     <div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 leading-tight">
                             Have a Project in<br className="hidden sm:block" />
-                            Mind? Let's Talk.
+                            Mind? Let’s Talk.
                         </h2>
                     </div>
 
                     {/* Right Column: Description and Connect Buttons */}
                     <div className="flex flex-col">
                         <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                            We'd love to hear about your event, installation, or idea. Fill out the 
+                            We’d love to hear about your event, installation, or idea. Fill out the 
                             form below or reach us directly — our team will respond within 24 hours.
                         </p>
                         
@@ -50,7 +50,7 @@ export default function Contact() {
                             Book a Free Consultation
                         </h3>
                         <p className="text-[#0f123f] text-base md:text-lg font-medium">
-                            // Reach out today and take the first step towards a unforgettable experience.
+                             Reach out today and take the first step towards a unforgettable experience.
                         </p>
                     </div>
 
