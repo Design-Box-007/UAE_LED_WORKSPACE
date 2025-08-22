@@ -1,7 +1,6 @@
 import images from "@/data/assets";
-import DisplaySolutions from "../UI/DisplaySolutions";
 
-const tabsData = [
+export const tabsData = [
   {
     id: "all",
     name: "All",
@@ -85,20 +84,3 @@ const tabsData = [
     ],
   },
 ];
-
-export default function DisplaySolutionsPage() {
-  return (
-    <section className="py-10">
-      <DisplaySolutions
-        title="Our Display Solutions"
-        subtitle={
-          <>
-            Versatile LED Products Tailored for Every Space, <br />
-            Purpose, and Performance Need
-          </>
-        }
-        tabsData={tabsData}
-      />
-    </section>
-  );
-}

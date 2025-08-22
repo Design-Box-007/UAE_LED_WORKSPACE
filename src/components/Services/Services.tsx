@@ -1,20 +1,15 @@
-"use client";
-
+import React from "react";
 import Hero from "./Hero";
-import AboutSection from "./AboutSection";
-import OurWork from "./OurWork";
-import Testimonial from "./Testimonial";
-import FinalCTA from "./FinalCTA";
-import Contact from "./Contact";
-import CTA from "../UI/CTA";
 import DisplaySolutions from "../UI/DisplaySolutions";
 import { tabsData } from "@/data/Display-solution/data";
+import CTA from "../UI/CTA";
+import FAQCard from "../UI/FAQCard";
+import { faqs } from "@/data/FAQ/data";
 
-const Home = () => {
+const Services = () => {
   return (
-    <main>
+    <div>
       <Hero />
-      <AboutSection />
       <DisplaySolutions
         title="Our Display Solutions"
         subtitle={
@@ -34,11 +29,9 @@ const Home = () => {
           href: "/consultation",
         }}
       />
-      <OurWork />
-      <Testimonial />
-      <FinalCTA />
-      <Contact />
-    </main>
+      <FAQCard faqs={faqs} title="Frequently Asked Questions" />
+    </div>
   );
 };
-export default Home;
+
+export default Services;
