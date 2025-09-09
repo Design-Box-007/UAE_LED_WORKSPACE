@@ -6,8 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
 import images from "@/data/assets";
-import { BiRightArrow } from "react-icons/bi";
-import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const slides = [

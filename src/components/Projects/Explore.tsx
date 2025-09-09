@@ -4,8 +4,7 @@ import images from "@/data/assets";
 import { Instagram } from "lucide-react";
 import Image from "next/image";
 import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
-import { FaWhatsapp } from "react-icons/fa";
-
+ 
 const chips = [
   { id: "all", label: "All", icon: "grid" },
   { id: "indoor", label: "Indoor LED Display", icon: "dot" },
