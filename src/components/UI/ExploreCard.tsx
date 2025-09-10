@@ -1,4 +1,6 @@
+import { formatToHyphenated } from "@/utils/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface InsightItem {
@@ -46,9 +48,11 @@ const Explore: React.FC<ExploreProps> = ({ insights, heading }) => {
               <p className="text-gray-500 text-base sm:text-lg mb-6 flex-grow">
                 {item.desc}
               </p>
+              <Link href={`blog/${formatToHyphenated(item.title)}`}>
               <button className="bg-gray-100 rounded-lg py-3 px-4 font-medium text-gray-900 transition hover:bg-gray-200 w-full">
                 Read More
               </button>
+              </Link>
             </div>
           ))}
         </div>

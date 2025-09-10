@@ -29,15 +29,17 @@ const Navbar = () => {
         className={`text-lg md:text-3xl font-medium tracking-wide ${
           pathName === "/"
             ? "text-white"
-            : pathName === "/about"
+            : pathName.startsWith("/about")
             ? "text-[#18245D]"
-            : pathName === "/services"
+            : pathName.startsWith("/services")
             ? "text-white"
-            : pathName === "/projects"
+            : pathName.startsWith("/projects")
             ? "text-white"
-            : pathName === "/blog"
+            : pathName.startsWith("/blog") // ✅ this will cover both /blog and /blog/[slug]
             ? "text-[#18245D]"
-            : pathName === "/faq"
+            : pathName.startsWith("/faq")
+            ? "text-white"
+            : ""
         }`}
       >
         LED Display UAE
