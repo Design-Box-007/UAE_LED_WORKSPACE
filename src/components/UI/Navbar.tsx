@@ -34,6 +34,10 @@ const Navbar = () => {
             : pathName === "/services"
             ? "text-white"
             : pathName === "/projects"
+            ? "text-white"
+            : pathName === "/blog"
+            ? "text-[#18245D]"
+            : pathName === "/faq"
         }`}
       >
         LED Display UAE

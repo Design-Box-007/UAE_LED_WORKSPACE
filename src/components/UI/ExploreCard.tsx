@@ -14,7 +14,7 @@ interface ExploreProps {
 
 const Explore: React.FC<ExploreProps> = ({ insights, heading }) => {
   return (
-    <section className="px-5 sm:px-10 lg:px-20 pb-20 lg:pb-40">
+    <section className="px-5 sm:px-10 lg:px-10 pb-20 lg:pb-40">
       <div>
         {/* Heading */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-6 gap-3 md:gap-0">

@@ -1,41 +1,43 @@
-"use client";
+import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
+import React from 'react'
 
-import images from "@/data/assets";
-import Image from "next/image";
-
-
-export default function HeroSection() {
+const Hero = () => {
   return (
-    <section className="relative w-full h-[90vh] top-20 flex items-end rounded-xl overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src={images.blog.img10}
-        alt="Hero Background"
-        fill
-        className="object-cover"
-        priority
-      />
+    <div>
+      <div className="px-[20px] overflow-hidden pt-20 pb-20">
+        {/* Image */}
+        <div className="relative">
+          <Image
+            src="/images/blog/blog-10.png" // replace with your image path
+            alt="Feature"
+            width={1080}
+            height={720}
+            className="w-full md:h-160 h-100 object-cover brightness-60 rounded-2xl"
+          />
 
-      {/* Overlay (optional for dark gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          {/* Text Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex items-center justify-between">
+            {/* Left Side Text */}
+            <div>
+              <p className="md:text-[20px]">Featured</p>
+              <h2 className="md:text-[40px] text-[20px] mt-1 font-bold">
+                Illuminating Ideas: Explore the World of LED Displays
+              </h2>
+              <p className="md:text-[24px] mt-2">
+                Discover insights, trends, and solutions for events, advertising, and beyond.
+              </p>
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 p-6 md:p-12 lg:p-16 max-w-3xl text-white">
-        <p className="text-sm mb-2 opacity-80">Featured</p>
-        <h1 className="text-2xl md:text-4xl font-semibold mb-4">
-          Illuminating Ideas: Explore the World of LED Displays
-        </h1>
-        <p className="text-base md:text-lg opacity-90">
-          Discover insights, trends, and solutions for events, advertising, and
-          beyond.
-        </p>
-
-        {/* Arrow button */}
-        <button className="mt-6 flex items-center gap-2 text-white hover:gap-3 transition-all">
-          <span className="text-lg font-medium">Explore</span>
-          <span className="text-2xl">→</span>
-        </button>
+            {/* Arrow Button */}
+            <button className="ml-6 p-3 bg-white/20 rounded-full hover:bg-white/30 transition">
+              <ArrowRight size={28} />
+            </button>
+          </div>
+        </div>
       </div>
-    </section>
-  );
+    </div>
+  )
 }
+
+export default Hero
