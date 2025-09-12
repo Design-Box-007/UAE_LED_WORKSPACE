@@ -4,14 +4,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --navy-deep: #1F2964;
+  --navy-deep: #1F2964; 
   --poppins: "Poppins", sans-serif;
+  --hero-color: #0f123f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--navy-deep);
+  --color-hero: var(--hero-color)
 }
 
 /* @media (prefers-color-scheme: dark) {

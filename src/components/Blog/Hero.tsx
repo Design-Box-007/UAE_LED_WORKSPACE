@@ -5,7 +5,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <div>
-      <div className="px-[20px] overflow-hidden pt-20 pb-20">
+      <div className="px-3 overflow-hidden pt-20 pb-20">
         {/* Image */}
         <div className="relative">
           <Image

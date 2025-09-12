@@ -17,11 +17,10 @@ export default function Hero() {
   
 
   return (
-    <section className=" w-full flex flex-col justify-center overflow-hidden bg-[#0f123f] py-10">
-
+    <section className=" w-full flex flex-col justify-center overflow-hidden bg-hero pt-20 pb-5 md:pt-30">
       {/* Content */}
-      <div className="text-center pt-35 pb-20 px-6 lg:px-2">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+      <div className="text-center pb-10 px-6 lg:px-2">
+        <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
           Innovative LED Displays for Every Need
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-8">

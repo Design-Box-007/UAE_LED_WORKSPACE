@@ -31,17 +31,17 @@ export default function DisplaySolutions({
   const currentContent = tabsData.find((tab) => tab.id === activeTab) || tabsData[0];
 
   return (
-    <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
-      <div className="mx-auto max-w-[1320px]">
+    <section className="relative w-full bg-white px-4 md:px-8 lg:px-10 py-5 md:py-10 pt-10">
+      <div className="mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 md:gap-8 lg:gap-[99px] w-full mb-8 md:mb-10 lg:mb-12">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end gap-6 md:gap-8 lg:gap-[99px] w-full mb-8 md:mb-10 lg:mb-12 ">
           <div className="flex-none text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-[#0f123f]">
               {title}
             </h2>
           </div>
           <div className="flex-none text-center lg:text-left">
-            <p className="text-gray-700 text-base md:text-lg">
+            <p className="text-gray-700 text-[15px] md:text-lg">
               {subtitle}
             </p>
           </div>

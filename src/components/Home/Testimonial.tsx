@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function Testimonial() {
     return (
-        <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
+        <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-5 md:py-10">
             <div className="mx-auto max-w-[1320px]">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Left Column: Content */}
                     <div className="flex flex-col text-center lg:text-left">
-                        <p className="text-[#0f123f] font-medium text-base md:text-lg mb-3 md:mb-4">Testimonial</p>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 leading-tight mb-6 md:mb-8">
-                            What Our Clients<br className="hidden sm:block" />
+                        <p className="text-hero font-medium text-base md:text-lg mb-3 md:mb-4">Testimonial</p>
+                        <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-hero leading-tight mb-4 md:mb-5">
+                            What Our Clients <br className="md:hidden" />
                             Are Saying
                         </h2>
                         <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
@@ -31,7 +31,7 @@ export default function Testimonial() {
                     </div>
 
                     {/* Right Column: Testimonial Card */}
-                    <div className="bg-gray-50 rounded-2xl md:rounded-3xl p-6 md:p-8 relative overflow-hidden mt-8 lg:mt-0">
+                    <div className="bg-gray-50 rounded-2xl md:rounded-3xl md:p-5 relative overflow-hidden lg:mt-0">
                         {/* Client Info */}
                         <div className="flex items-center gap-3 mb-4 md:mb-6">
                             <div className="w-10 md:w-12 h-10 md:h-12 bg-[#0f123f] rounded-full flex items-center justify-center flex-shrink-0">
@@ -53,7 +53,7 @@ export default function Testimonial() {
                         </blockquote>
 
                         {/* Background Image */}
-                        <div className="relative h-32 md:h-40 lg:h-48 rounded-xl md:rounded-2xl overflow-hidden">
+                        <div className="relative h-60 md:h-40 lg:h-48 rounded-xl md:rounded-2xl overflow-hidden">
                             <Image
                                 src={images.projects.img2}
                                 alt="LED Display Installation"

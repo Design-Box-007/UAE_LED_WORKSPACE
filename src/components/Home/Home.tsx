@@ -4,7 +4,6 @@ import Hero from "./Hero";
 import AboutSection from "./AboutSection";
 import OurWork from "./OurWork";
 import Testimonial from "./Testimonial";
-import FinalCTA from "./FinalCTA";
 import Contact from "./Contact";
 import CTA from "../UI/CTA";
 import DisplaySolutions from "../UI/DisplaySolutions";
@@ -36,7 +35,15 @@ const Home = () => {
       />
       <OurWork />
       <Testimonial />
-      <FinalCTA />
+      <CTA
+        title="Let’s Light Up Your Next Experience"
+        description="From idea to installation, our team is ready to bring your LED vision to life — no matter the scale or scope."
+        primaryButton={{ label: "Request a Quote", href: "/quote" }}
+        secondaryButton={{
+          label: "Get a Free Consultation",
+          href: "/consultation",
+        }}
+      />
       <Contact />
     </main>
   );

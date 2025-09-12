@@ -17,18 +17,43 @@ const BlogDetail = () => {
 
   if (!blog) return <p className="text-center text-gray-500">Not Found</p>;
 
+  const handleShare = async () => {
+    const shareData = {
+      title: blog.title,
+      text: blog.desc,
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        // ✅ Use Web Share API
+        await navigator.share(shareData);
+      } else {
+        // ❌ Fallback → copy link
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+      }
+    } catch (error) {
+      console.error("Error sharing:", error);
+    }
+  };
+
   return (
-    <div className="mx-auto px-4 py-8   pt-20">
+    <div className="mx-auto px-4 py-8 md:pt-25 pt-20">
       {/* Header with title + share icon */}
-      <div className="flex items-start justify-between">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 leading-snug">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl md:text-3xl font-semibold text-gray-900 leading-snug">
           {blog.title}
         </h2>
-        <FiShare2 className="text-gray-500 hover:text-gray-800 cursor-pointer text-xl" />
+        <FiShare2
+          title="share"
+          onClick={handleShare}
+          className="text-gray-500 hover:text-gray-800 cursor-pointer text-xl"
+        />
       </div>
 
       {/* Blog image */}
-      <div className="mt-6 rounded-lg overflow-hidden w-full h-[800px]">
+      <div className="mt-6 rounded-lg overflow-hidden w-full h-full lg:h-[800px]">
         <Image
           src={blog.image}
           alt={blog.title}

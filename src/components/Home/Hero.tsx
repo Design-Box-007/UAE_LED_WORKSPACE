@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative w-full bg-[#0f123f] px-4 md:px-8 lg:px-20 text-white overflow-hidden">
-            <div className="mx-auto py-16 md:py-24 lg:py-32 flex flex-col items-center">
+        <section className="relative w-full bg-hero px-3 md:px-8 lg:px-10 text-white overflow-hidden md:pt-0 pt-10">
+            <div className="mx-auto py-10 md:py-24 lg:py-32 flex flex-col items-center">
                 {/* Left Column: Text */}
-                <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-8 lg:gap-0">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 text-center lg:text-left">
-                        Unmatched LED Display <br />
-                        Solutions for Every <br />
+                <div className="flex flex-col lg:flex-row justify-between items-center w-full lg:gap-0">
+                    <h1 className="text-xl md:text-4xl lg:text-5xl font-medium leading-tight mb-6 text-center lg:text-left">
+                        Unmatched LED Display <br className="hidden lg:block"/>
+                        Solutions for Every <br className="hidden lg:block"/>
                         Experience
                     </h1>
                     <div className="text-center lg:text-left">

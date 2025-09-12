@@ -47,8 +47,8 @@ const items = [
 
 export default function Explore() {
   return (
-    <section className="w-full py-10 sm:py-6 md:py-8 px-10">
-      <div className="mx-auto w-full rounded-3xl bg-[#1b2970]/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 ring-white/5 px-3 sm:px-4 md:px-6 lg:px-7 py-4 sm:py-5 md:py-6">
+    <section className="w-full pb-10">
+      <div className="mx-auto w-full bg-[#1b2970]/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 ring-white/5 px-3 sm:px-4 md:px-6 lg:px-7 py-4 sm:py-5 md:py-6">
         {/* Header row */}
         <div className="flex flex-wrap items-center justify-between gap-3 py-3">
           <h2 className="text-white text-[20px] sm:text-[22px] md:text-5xl font-semibold">

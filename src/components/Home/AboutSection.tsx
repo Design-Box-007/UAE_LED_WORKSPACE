@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function AboutSection() {
     return (
-        <section className="relative w-full bg-gray-50 px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
+        <section className="relative w-full bg-gray-50 px-4 md:px-5 lg:px-20 py-5 lg:py-10">
             <div className="mx-auto max-w-[1320px]">
                 {/* Header Section */}
                 <div className="flex flex-col items-end gap-6 md:gap-8 mb-12 md:mb-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 w-full items-start">
                         {/* Left Column: About Us Heading */}
                         <div className="text-center lg:text-left">
-                            <p className="text-[#0f123f] font-medium text-base md:text-lg mb-3 md:mb-4">About Us</p>
+                            <p className="text-hero font-medium text-xl lg:text-lg mb-3 md:mb-4">About Us</p>
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900 leading-tight">
                                 Lighting Up Experiences with <br className="hidden md:block" />
                                 World-Class LED Displays
@@ -20,8 +20,8 @@ export default function AboutSection() {
                         </div>
 
                         {/* Right Column: Description Text */}
-                        <div className="flex justify-start mt-0 lg:mt-11 text-center lg:text-left">
-                            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-m">
+                        <div className="flex justify-start mt-0 lg:mt-10 text-center lg:text-left">
+                            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-xl text-justify">
                                 LED Display UAE is a leading provider of innovative LED screen and display 
                                 solutions helping brands, agencies, and event organizers deliver unforgettable 
                                 visual experiences. From compact digital kiosks to massive 360° installations, 
@@ -86,11 +86,12 @@ export default function AboutSection() {
                     </div>
 
                     {/* Right Column: Large Image with CTA Button */}
-                    <div className="relative flex-grow h-64 md:h-80 lg:h-full rounded-2xl overflow-hidden shadow-lg mt-6 lg:mt-0">
+                    <div className="relative flex-grow md:h-80 lg:h-full rounded-2xl overflow-hidden shadow-lg">
                         <Image
                             src={images.aboutUs.img1}
                             alt="LED Display Installation"
-                            fill
+                            width={1080}
+                            height={720}
                             className="object-cover"
                         />
                         

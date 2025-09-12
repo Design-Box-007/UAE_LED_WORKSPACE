@@ -18,7 +18,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="px-5 sm:px-10 lg:px-20 flex flex-col gap-8 lg:gap-13">
+    <section className="px-4 sm:px-10 lg:px-20 flex flex-col gap-8 lg:gap-13">
       <div>
         <div className="mx-auto rounded-lg flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
        
@@ -54,7 +54,7 @@ const AboutSection = () => {
       </div>
 
       {/* Trusted By Section */}
-      <div className="max-w-6xl mx-auto mt-8 lg:mt-10 text-center">
+      <div className="max-w-6xl mx-auto mt-3 text-center">
         <span className="text-xl sm:text-2xl md:text-3xl tracking-wide">
           Trusted By
         </span>

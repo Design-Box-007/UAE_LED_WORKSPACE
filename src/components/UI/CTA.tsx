@@ -22,7 +22,7 @@ export default function CTA({
   secondaryButton,
 }: CTASectionProps) {
   return (
-    <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-12">
+    <section className="relative w-full bg-white px-4 md:px-8 lg:px-10">
       <div className="mx-auto max-w-[1320px]">
         {/* CTA Card */}
         <div
@@ -31,28 +31,28 @@ export default function CTA({
             background: "linear-gradient(180deg, #1F2964 0%, #3F53CA 100%)",
           }}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center text-center lg:text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-12 items-center text-center lg:text-left">
             {/* Left Column: Main Heading */}
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
                 {title}
               </h2>
             </div>
 
             {/* Right Column: Description */}
             <div>
-              <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8">
+              <p className="text-white text-[15px] md:text-lg lg:text-xl leading-relaxed">
                 {description}
               </p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 md:mt-10 lg:mt-12">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-5 md:mt-10">
             <div className="flex-1">
               <Link
                 href={primaryButton.href}
-                className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-6 md:px-8 lg:px-12 py-4 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
+                className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
               >
                 <span>{primaryButton.label}</span>
                 <svg
@@ -75,7 +75,7 @@ export default function CTA({
               <div className="flex-1">
                 <Link
                   href={secondaryButton.href}
-                  className="w-full inline-flex items-center justify-between gap-3 bg-white text-[#0f123f] px-6 md:px-8 lg:px-12 py-4 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
+                  className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
                 >
                   <span>{secondaryButton.label}</span>
                   <svg

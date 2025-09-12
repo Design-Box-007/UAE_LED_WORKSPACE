@@ -16,20 +16,20 @@ interface ExploreProps {
 
 const Explore: React.FC<ExploreProps> = ({ insights, heading }) => {
   return (
-    <section className="px-5 sm:px-10 lg:px-10 pb-20 lg:pb-40">
+    <section className="px-2 lg:px-10 pb-20 lg:pb-40">
       <div>
         {/* Heading */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-6 gap-3 md:gap-0">
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-[#24316E] tracking-tight text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start md:justify-between mb-6 gap-3 md:gap-0">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-hero tracking-tight text-center lg:text-left">
             {heading}
           </h2>
-          <span className="text-sm sm:text-base md:text-lg text-[#24316E] font-bold text-center md:text-right">
+          <span className="text-sm sm:text-base md:text-lg text-hero font-bold text-center md:text-right">
             Explore the Latest Trends, Tech, and Tips in LED Display Solutions
           </span>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {insights.map((item, idx) => (
             <div
               key={idx}

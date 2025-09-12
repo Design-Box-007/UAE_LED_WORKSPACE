@@ -19,9 +19,9 @@ const cardDetails = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="flex items-center justify-center py-20 px-5 md:px-10">
+    <section className="flex items-center justify-center py-5 md:px-10">
   <div className="w-full rounded-[30px] drop-shadow-lg bg-gray-50 py-8 md:py-10 px-6 md:px-10">
-    <h2 className="text-3xl md:text-5xl lg:text-7xl text-gray-900 mb-6 md:mb-10 text-center md:text-left">
+    <h2 className="text-3xl md:text-5xl lg:text-7xl text-hero mb-6 md:mb-10 text-center md:text-left">
       Why Choose LED Display UAE?
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

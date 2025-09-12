@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function OurWork() {
     return (
-        <section className="relative w-full bg-gray-50 px-4 md:px-8 lg:px-20 py-12 md:py-16 lg:py-20">
+        <section className="relative w-full bg-gray-50 px-4 md:px-8 lg:px-20 py-7 md:py-10">
             <div className="mx-auto max-w-[1320px]">
                 {/* Header Section */}
                 <div className="flex flex-col gap-6 md:gap-8 w-full mb-12 md:mb-16">
                     {/* First Line: "Our Work" label and Description */}
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-4 md:gap-0 text-center md:text-left">
-                        <p className="text-[#0f123f] font-medium text-base md:text-lg">Our Work</p>
+                    <div className="flex flex-col md:flex-row justify-between md:items-start items-center w-full gap-4 md:gap-0 text-center md:text-left">
+                        <p className="text-hero font-medium text-xl md:text-lg">Our Work</p>
                         <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                             From expo booths to outdoor hoardings, our LED solutions have<br className="hidden md:block" />
                             powered over 1500+ projects globally.
