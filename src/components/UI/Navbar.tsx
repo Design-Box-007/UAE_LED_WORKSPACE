@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaPhone } from "react-icons/fa";
 
 interface NavLink {
   title: string;
@@ -25,7 +26,8 @@ const getActiveColor = (pathName: string) => {
   if (pathName.startsWith("/services")) return "white";
   if (pathName.startsWith("/projects")) return "white";
   if (pathName.startsWith("/blog")) return "#18245D";
-  if (pathName.startsWith("/faq")) return "white";
+  if (pathName.startsWith("/faq")) return "18245D";
+  if (pathName.startsWith("/contact")) return "white";
   return "black";
 };
 
@@ -56,6 +58,13 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <li>
+          <Link href={""}>
+            <button className="bg-primary text-background p-2 rounded-full hover:opacity-90 transition">
+              <FaPhone size={16} />
+            </button>
+          </Link>
+        </li>
       </ul>
 
       {/* Mobile / Tablet Hamburger Button */}

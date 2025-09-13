@@ -1,10 +1,11 @@
-import FAQ from '@/components/FAQ/FAQ'
+import FAQCard from '@/components/UI/FAQCard'
+import { faqs } from '@/data/FAQ/data'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <FAQ/>
+    <div className='pt-20'>
+       <FAQCard faqs={faqs} title="Frequently Asked Questions" />
     </div>
   )
 }

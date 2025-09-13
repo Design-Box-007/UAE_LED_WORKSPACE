@@ -19,4 +19,29 @@ export const faqs = [
     answer:
       "Yes, it is flexible enough to support both new ventures and established organizations across industries.",
   },
+  {
+    question: "Does the platform integrate with other tools?",
+    answer:
+      "Absolutely! It integrates seamlessly with popular tools like CRM, ERP, and project management software.",
+  },
+  {
+    question: "Can I customize the platform to match my business needs?",
+    answer:
+      "Yes, the platform is highly customizable with features and modules that can be tailored to your business requirements.",
+  },
+  {
+    question: "Is my data safe on this platform?",
+    answer:
+      "We use industry-standard encryption, regular security audits, and GDPR-compliant policies to ensure your data is always secure.",
+  },
+  {
+    question: "Do you provide training for new users?",
+    answer:
+      "Yes, we offer onboarding sessions, video tutorials, and detailed documentation to help new users get started quickly.",
+  },
+  {
+    question: "What pricing plans are available?",
+    answer:
+      "We offer flexible pricing plans including monthly and annual subscriptions to suit different business sizes and budgets.",
+  },
 ];

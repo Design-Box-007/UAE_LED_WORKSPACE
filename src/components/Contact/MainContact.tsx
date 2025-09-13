@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from './Hero'
 import Contact from '../Home/Contact'
 
-const FAQ = () => {
+const MainContact = () => {
   return (
     <div>
       <Hero/>
@@ -11,4 +11,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default MainContact
