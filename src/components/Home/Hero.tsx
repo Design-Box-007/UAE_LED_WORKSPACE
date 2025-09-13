@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative w-full bg-hero px-3 md:px-8 lg:px-10 text-white overflow-hidden md:pt-0 pt-10">
+        <section className="relative w-full bg-gradient-blue-white-downward px-3 md:px-8 lg:px-10 text-white overflow-hidden md:pt-0 pt-10">
             <div className="mx-auto py-10 md:py-24 lg:py-32 flex flex-col items-center">
                 {/* Left Column: Text */}
                 <div className="flex flex-col lg:flex-row justify-between items-center w-full lg:gap-0">

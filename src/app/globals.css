@@ -6,7 +6,7 @@
   --foreground: #171717;
   --navy-deep: #1F2964; 
   --poppins: "Poppins", sans-serif;
-  --hero-color: #0f123f;
+  --hero-color: #1F2964;
 }
 
 @theme inline {
@@ -32,3 +32,5 @@ body {
 .bg-gradient-blue-white-downward {
   background: linear-gradient(180deg, #101A50 0%, #4453A2 59.13%, #F8F8F8 100%);
 }
+
+/* Your global styles */

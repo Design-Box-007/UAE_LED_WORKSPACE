@@ -1,11 +1,10 @@
-
-import Contact from '@/components/Contact/MainContact'
+import MainContact from '@/components/Contact/MainContact'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-     <Contact/>
+      <MainContact/>
     </div>
   )
 }

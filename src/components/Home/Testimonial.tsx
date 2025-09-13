@@ -23,7 +23,7 @@ export default function Testimonial() {
             </p>
 
             {/* CTA Button */}
-            <div className="flex items-center gap-4 hover:gap-6 transition-all duration-300 bg-hero text-white py-3 px-4 rounded-[30px] cursor-pointer">
+            <div className="flex items-center justify-between gap-4 hover:gap-6 transition-all duration-300 bg-hero text-white py-3 px-4 rounded-[30px] cursor-pointer md:w-full">
               <button className="text-2xl">Get a Consult Now</button>
              
               <svg

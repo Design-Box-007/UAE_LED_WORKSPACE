@@ -22,11 +22,11 @@ const navLinks: NavLink[] = [
 // ✅ function to decide color based on route
 const getActiveColor = (pathName: string) => {
   if (pathName === "/") return "white";
-  if (pathName.startsWith("/about")) return "#18245D";
+  if (pathName.startsWith("/about")) return "#1F2964";
   if (pathName.startsWith("/services")) return "white";
   if (pathName.startsWith("/projects")) return "white";
-  if (pathName.startsWith("/blog")) return "#18245D";
-  if (pathName.startsWith("/faq")) return "18245D";
+  if (pathName.startsWith("/blog")) return "#1F2964";
+  if (pathName.startsWith("/faq")) return "#1F2964";
   if (pathName.startsWith("/contact")) return "white";
   return "black";
 };
@@ -59,7 +59,7 @@ const Navbar = () => {
           </li>
         ))}
         <li>
-          <Link href={""}>
+          <Link href={"/contact"}>
             <button className="bg-primary text-background p-2 rounded-full hover:opacity-90 transition">
               <FaPhone size={16} />
             </button>

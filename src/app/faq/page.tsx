@@ -5,7 +5,7 @@ import React from 'react'
 const page = () => {
   return (
     <div className='pt-20'>
-       <FAQCard faqs={faqs} title="Frequently Asked Questions" />
+      <FAQCard faqs={faqs}/>
     </div>
   )
 }

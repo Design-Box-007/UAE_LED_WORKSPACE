@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-[#0f123f] text-white px-6 text-center pt-30 pb-10">
+    <section className="bg-gradient-blue-white-downward text-white px-6 text-center pt-30 pb-10">
       {/* Title */}
 
       <h2 className="text-2xl md:text-[50px]">

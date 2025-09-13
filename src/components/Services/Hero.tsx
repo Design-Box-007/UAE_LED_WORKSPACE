@@ -17,7 +17,7 @@ export default function Hero() {
   
 
   return (
-    <section className=" w-full flex flex-col justify-center overflow-hidden bg-hero pt-20 pb-5 md:pt-30">
+    <section className=" w-full flex flex-col justify-center overflow-hidden bg-gradient-blue-white-downward pt-20 pb-5 md:pt-30">
       {/* Content */}
       <div className="text-center pb-10 px-6 lg:px-2">
         <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
