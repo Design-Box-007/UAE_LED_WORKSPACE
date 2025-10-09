@@ -3,6 +3,9 @@
 import React from "react";
 import Link from "next/link";
 
+// CTA
+
+// 1. Types for Data Structure
 interface CTAButton {
   label: string;
   href: string;
@@ -13,17 +16,60 @@ interface CTASectionProps {
   description: string;
   primaryButton: CTAButton;
   secondaryButton?: CTAButton;
+  className?:string
 }
 
-export default function CTA({
+// 2. Reusable SVG Icon
+const ArrowRightIcon: React.FC<{ sizeClass?: string }> = ({
+  sizeClass = "w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6",
+}) => (
+  <svg
+    className={`${sizeClass} group-hover:translate-x-1 transition-transform duration-300`}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+);
+
+// 3. Extracted Button Link Component
+interface ButtonLinkProps {
+  buttonData: CTAButton;
+  isSecondary?: boolean;
+}
+
+const ButtonLink: React.FC<ButtonLinkProps> = ({
+  buttonData,
+  isSecondary = false,
+}) => (
+  <div className={isSecondary ? "flex-1" : ""}>
+    <Link
+      href={buttonData.href}
+      className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
+    >
+      <span>{buttonData.label}</span>
+      <ArrowRightIcon />
+    </Link>
+  </div>
+);
+
+// 4. Main Component
+const CTA: React.FC<CTASectionProps> = ({
   title,
   description,
   primaryButton,
   secondaryButton,
-}: CTASectionProps) {
+  className,
+}) => {
   return (
-    <section className="relative w-full bg-white px-4 md:px-8 lg:px-10">
-      <div className="mx-auto max-w-[1320px]">
+    <section className={`relative w-full py-10 bg-white ${className}`}>
+      <div className="mx-auto">
         {/* CTA Card */}
         <div
           className="rounded-2xl md:rounded-3xl p-8 md:p-12 lg:p-16"
@@ -48,55 +94,17 @@ export default function CTA({
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-5 md:mt-10">
-            <div className="flex-1">
-              <Link
-                href={primaryButton.href}
-                className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
-              >
-                <span>{primaryButton.label}</span>
-                <svg
-                  className="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-5 md:mt-10 justify-center">
+            <ButtonLink buttonData={primaryButton} />
 
             {secondaryButton && (
-              <div className="flex-1">
-                <Link
-                  href={secondaryButton.href}
-                  className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
-                >
-                  <span>{secondaryButton.label}</span>
-                  <svg
-                    className="w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 group-hover:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
+              <ButtonLink buttonData={secondaryButton} isSecondary={true} />
             )}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default CTA;

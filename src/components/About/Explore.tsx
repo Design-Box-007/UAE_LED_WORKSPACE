@@ -22,7 +22,7 @@ const insights = [
 
 const Explore = () => {
   return (
-    <section className="px-5 sm:px-10 pt-10 lg:px-20 pb-20 lg:pb-40">
+    <section className="pt-10 pb-20 lg:pb-40">
       <div>
         {/* Heading */}
         <div className="flex flex-col md:items-center lg:items-start md:justify-between mb-6 gap-3">

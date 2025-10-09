@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/UI/Navbar";
 import Footer from "@/components/UI/Footer";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // choose what you need
+  variable: "--font-playfair", // optional but useful
+});
 
 export const metadata: Metadata = {
   title: "UAE LED Workspace",
@@ -15,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased relative`}
-      >
+      <body className={`antialiased relative ${playfair.variable}`}>
         <Navbar />
         {children}
         <Footer />
