@@ -2,11 +2,54 @@
 
 import images from "@/data/assets";
 import Image from "next/image";
+import * as React from "react";
 
-export default function Testimonial() {
+// Testimonial
+
+// Reusable Icons
+const ArrowRightIcon: React.FC = () => (
+  <svg
+    className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform duration-300"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 8l4 4m0 0l-4 4m4-4H3"
+    />
+  </svg>
+);
+
+const UserIcon: React.FC = () => (
+  <svg
+    className="w-5 md:w-6 h-5 md:h-6 text-white"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path
+      fillRule="evenodd"
+      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+// Extracted Component
+const CtaButton: React.FC = () => (
+  // Note: The original markup made the parent div the button target with cursor-pointer
+  <div className="flex items-center justify-between gap-4 hover:gap-6 transition-all duration-300 bg-hero text-white py-3 px-4 rounded-[30px] cursor-pointer md:w-full">
+    <button className="text-2xl">Get a Consult Now</button>
+    <ArrowRightIcon />
+  </div>
+);
+
+const Testimonial: React.FC = () => {
   return (
-    <section className="relative w-full bg-white px-4 md:px-8 lg:px-20 py-5 md:py-10">
-      <div className="mx-auto max-w-[1320px]">
+    <section className="relative w-full bg-white px-5 md:px-10 py-5 md:py-10">
+      <div className="mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Column: Content */}
           <div className="flex flex-col text-center lg:text-left">
@@ -23,23 +66,7 @@ export default function Testimonial() {
             </p>
 
             {/* CTA Button */}
-            <div className="flex items-center justify-between gap-4 hover:gap-6 transition-all duration-300 bg-hero text-white py-3 px-4 rounded-[30px] cursor-pointer md:w-full">
-              <button className="text-2xl">Get a Consult Now</button>
-             
-              <svg
-                className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </div>
+            <CtaButton />
           </div>
 
           {/* Right Column: Testimonial Card */}
@@ -47,17 +74,7 @@ export default function Testimonial() {
             {/* Client Info */}
             <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="w-10 md:w-12 h-10 md:h-12 bg-[#0f123f] rounded-full flex items-center justify-center flex-shrink-0">
-                <svg
-                  className="w-5 md:w-6 h-5 md:h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <UserIcon />
               </div>
               <div>
                 <p className="font-semibold text-gray-900 text-base md:text-lg">
@@ -90,4 +107,6 @@ export default function Testimonial() {
       </div>
     </section>
   );
-}
+};
+
+export default Testimonial;

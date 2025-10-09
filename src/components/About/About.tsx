@@ -1,36 +1,32 @@
-import { tabsData } from "@/data/Display-solution/data";
-import DisplaySolutions from "../UI/DisplaySolutions";
+
 import AboutSection from "./AboutSection";
 import Explore from "./Explore";
 import Hero from "./Hero";
 import WhyChooseUs from "./WhyChooseUs";
 import CTA from "../UI/CTA";
+import images from "@/data/assets";
 
 const About = () => {
   return (
-    <div>
-      <Hero />
+    <div className="px-5 md:px-10">
+      <Hero
+        image={images.aboutUs.img5}
+        title="Illuminating Ideas, Elevating Experiences"
+        description="Your Trusted Partner for Next-Gen LED Display Solutions"
+        position="top"
+        overlay={true}
+        titleColor="text-white"
+        descColor="text-gray-200"
+      />
       <AboutSection />
       <WhyChooseUs />
       <CTA
         title="Let’s Light Up Your Next Experience"
         description="From idea to installation, our team is ready to bring your LED vision to life — no matter the scale or scope."
         primaryButton={{ label: "Request a Quote", href: "/quote" }}
-        secondaryButton={{
-          label: " Contact Us Now",
-          href: "/consultation",
-        }}
+        className="px-0"
       />
-      <DisplaySolutions
-        title="Let’s Light Up Your Next Experience"
-        subtitle={
-          <>
-            Versatile LED Products Tailored for Every Space, <br />
-            Purpose, and Performance Need
-          </>
-        }
-        tabsData={tabsData}
-      />
+
       <Explore />
     </div>
   );

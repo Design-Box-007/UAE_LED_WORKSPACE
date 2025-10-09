@@ -4,7 +4,7 @@ import images from "@/data/assets";
 import { Instagram } from "lucide-react";
 import Image from "next/image";
 import { BsTwitterX, BsWhatsapp } from "react-icons/bs";
- 
+
 const chips = [
   { id: "all", label: "All", icon: "grid" },
   { id: "indoor", label: "Indoor LED Display", icon: "dot" },
@@ -47,12 +47,12 @@ const items = [
 
 export default function Explore() {
   return (
-    <section className="w-full pb-10">
-      <div className="mx-auto w-full bg-[#1b2970]/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 ring-white/5 px-3 sm:px-4 md:px-6 lg:px-7 py-4 sm:py-5 md:py-6">
+    <section className="w-full pb-10 px-5 md:px-10">
+      <div className="mx-auto rounded-2xl w-full bg-[#1b2970]/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 ring-white/5 px-3 sm:px-4 md:px-6 lg:px-7 py-4 sm:py-5 md:py-6">
         {/* Header row */}
         <div className="flex flex-wrap items-center justify-between gap-3 py-3">
           <h2 className="text-white text-[20px] sm:text-[22px] md:text-5xl font-semibold">
-            Explore Our Property Portfolio
+            View our works
           </h2>
 
           <div className="flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function Explore() {
         </div>
 
         {/* Grid */}
-        <div className="mt-4 grid grid-cols-1 gap-3.5 sm:mt-5 sm:grid-cols-2 sm:gap-4 lg:mt-6 lg:grid-cols-2 lg:gap-5">
+        <div className="mt-4 grid grid-cols-1 gap-3.5 sm:mt-5 sm:grid-cols-2 sm:gap-4 lg:mt-6 lg:grid-cols-3 lg:gap-5">
           {items.map((card) => (
             <figure
               key={card.id}

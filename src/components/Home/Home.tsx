@@ -7,7 +7,7 @@ import Testimonial from "./Testimonial";
 import Contact from "./Contact";
 import CTA from "../UI/CTA";
 import DisplaySolutions from "../UI/DisplaySolutions";
-import { tabsData } from "@/data/Display-solution/data";
+import { tabsData2 } from "@/data/Display-solution/data";
 
 const Home = () => {
   return (
@@ -15,34 +15,17 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <DisplaySolutions
-        title="Our Display Solutions"
-        subtitle={
-          <>
-            Versatile LED Products Tailored for Every Space, <br />
-            Purpose, and Performance Need
-          </>
-        }
-        tabsData={tabsData}
-      />
-      <CTA
-        title="Still Not Sure Which LED Display is Right for You?"
-        description="Talk to our experts for personalized recommendations based on your event, space, and audience needs."
-        primaryButton={{ label: "Request a Quote", href: "/quote" }}
-        secondaryButton={{
-          label: "Get a Free Consultation",
-          href: "/consultation",
-        }}
+        title="Services"
+        subtitle={"We provide end to end support for all types LED screens"}
+        tabsData={tabsData2}
       />
       <OurWork />
       <Testimonial />
       <CTA
         title="Let’s Light Up Your Next Experience"
         description="From idea to installation, our team is ready to bring your LED vision to life — no matter the scale or scope."
-        primaryButton={{ label: "Request a Quote", href: "/quote" }}
-        secondaryButton={{
-          label: "Get a Free Consultation",
-          href: "/consultation",
-        }}
+        primaryButton={{ label: "Request a Quote", href: "/contact" }}
+        className="px-5 md:px-10"
       />
       <Contact />
     </main>
