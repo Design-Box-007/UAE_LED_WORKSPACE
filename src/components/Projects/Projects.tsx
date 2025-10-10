@@ -2,10 +2,10 @@ import React from "react";
 
 import Explore from "./Explore";
 import CTA from "../UI/CTA";
-import FAQCard from "../UI/FAQCard";
 import { faqs } from "@/data/FAQ/data";
 import Hero from "../About/Hero";
 import images from "@/data/assets";
+import FAQAccordion from "../UI/FAQCard2";
 
 const Projects = () => {
   return (
@@ -27,7 +27,7 @@ const Projects = () => {
         primaryButton={{ label: "Request a Quote", href: "/quote" }}
         className="md:px-10 px-5"
       />
-      <FAQCard faqs={faqs} title="Frequently Asked Questions" />
+     <FAQAccordion faqs={faqs}/>
     </div>
   );
 };

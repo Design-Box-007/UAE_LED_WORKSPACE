@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero";
 import DisplaySolutions from "../UI/DisplaySolutions";
-import { tabsData2 } from "@/data/Display-solution/data";
+import { tabsData } from "@/data/Display-solution/data";
 import CTA from "../UI/CTA";
 import { faqs } from "@/data/FAQ/data";
 import FAQAccordion from "../UI/FAQCard2";
@@ -18,7 +18,7 @@ const Services = () => {
             Performance Need
           </>
         }
-        tabsData={tabsData2}
+        tabsData={tabsData}
       />
       <CTA
         title="Still Not Sure Which LED Display is Right for You?"

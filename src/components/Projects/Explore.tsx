@@ -60,7 +60,7 @@ export default function Explore() {
                 alt={card.title}
                 width={2000}
                 height={1200}
-                className="h-full w-full object-cover sm:h-[240px] md:h-[250px] lg:h-full transition-transform duration-300 group-hover:scale-[1.03]"
+                className="w-full object-cover h-[400px] transition-transform duration-300 group-hover:scale-[1.03]"
               />
               <figcaption className="absolute bottom-3 left-3 right-3">
                 <p className="text-white lg:text-2xl text-[15px] drop-shadow">

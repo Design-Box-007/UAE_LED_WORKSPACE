@@ -1,26 +1,29 @@
 "use client";
 
 import Hero from "./Hero";
-import AboutSection from "./AboutSection";
-import OurWork from "./OurWork";
-import Testimonial from "./Testimonial";
 import Contact from "./Contact";
 import CTA from "../UI/CTA";
 import DisplaySolutions from "../UI/DisplaySolutions";
-import { tabsData2 } from "@/data/Display-solution/data";
+import { tabsData } from "@/data/Display-solution/data";
+import AboutSection2 from "./AboutSection2";
+import OurWork2 from "./OurWork2";
+import Logo from "./Logo";
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <AboutSection />
+      {/* <AboutSection /> */}
+      <AboutSection2 />
       <DisplaySolutions
         title="Services"
         subtitle={"We provide end to end support for all types LED screens"}
-        tabsData={tabsData2}
+        tabsData={tabsData}
       />
-      <OurWork />
-      <Testimonial />
+      {/* <OurWork /> */}
+      <OurWork2 />
+      {/* <Testimonial /> */}
+      <Logo />
       <CTA
         title="Let’s Light Up Your Next Experience"
         description="From idea to installation, our team is ready to bring your LED vision to life — no matter the scale or scope."

@@ -1,39 +1,32 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { formatToHyphenated } from "@/utils/utils";
 
 // 1. Types for Data Structure
-interface Solution {
-  id: string;
+interface SolutionCardData {
   title: string;
   image: string;
-}
-
-interface TabContent {
-  id: string;
-  name: string;
-  solutions: Solution[];
 }
 
 interface DisplaySolutionsProps {
   title?: string;
   subtitle?: ReactNode;
-  tabsData: TabContent[];
+  tabsData: SolutionCardData[];
 }
 
 // 2. Reusable Icons
-const CheckCircleIcon: React.FC = () => (
-  <svg
-    className="w-3 md:w-4 h-3 md:h-4"
-    fill="currentColor"
-    viewBox="0 0 20 20"
-  >
-    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-  </svg>
-);
+// const CheckCircleIcon: React.FC = () => (
+//   <svg
+//     className="w-3 md:w-4 h-3 md:h-4"
+//     fill="currentColor"
+//     viewBox="0 0 20 20"
+//   >
+//     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+//   </svg>
+// );
 
 const ArrowRightIcon: React.FC = () => (
   <svg
@@ -53,66 +46,33 @@ const ArrowRightIcon: React.FC = () => (
 
 // 3. Extracted Components
 
-interface TabButtonProps {
-  tab: TabContent;
-  activeTab: string;
-  setActiveTab: (id: string) => void;
-}
-
-const TabButton: React.FC<TabButtonProps> = ({
-  tab,
-  activeTab,
-  setActiveTab,
-}) => {
-  const isActive = activeTab === tab.id;
-  const activeClass = "bg-[#0f123f] text-white border-[#0f123f]";
-  const inactiveClass =
-    "bg-white text-gray-700 border-gray-300 hover:border-[#0f123f] hover:text-[#0f123f]";
-
-  return (
-    <button
-      key={tab.id}
-      onClick={() => setActiveTab(tab.id)}
-      className={`inline-flex items-center gap-1 md:gap-2 px-3 md:px-6 py-1 rounded-md border transition-all duration-300 text-sm md:text-base ${
-        isActive ? activeClass : inactiveClass
-      }`}
-    >
-      <CheckCircleIcon />
-      {tab.name}
-    </button>
-  );
-};
-
 interface SolutionCardProps {
-  solution: Solution;
+  solution: SolutionCardData;
 }
 
 const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
-  <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer">
- <Link href={`/${formatToHyphenated(solution.title)}/`}> 
-    <div className="relative md:h-50 lg:h-70 overflow-hidden rounded-t-xl">
-      <Image
-        src={solution.image}
-        alt={solution.title}
-        fill
-        className="object-cover group-hover:scale-105 transition-transform duration-300"
-      />
-    </div>
-
-    <div className="p-3 md:p-4 bg-white">
-      <div className="flex items-center justify-between">
-        <h3 className="text-base md:text-lg font-semibold text-gray-900">
-          {solution.title}
-        </h3>
-
-       
+  <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2">
+    <Link href={`/${formatToHyphenated(solution.title)}/`}>
+      <div className="overflow-hidden rounded-t-xl flex justify-center p-5">
+        <Image
+          src={solution.image}
+          alt={solution.title}
+          width={1080}
+          height={720}
+          className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-[400px] mx-5 rounded-2xl"
+        />
+      </div>
+      <div className="p-3 md:p-4 bg-white">
+        <div className="flex items-center justify-between">
+          <h3 className="text-base md:text-lg font-semibold text-heading font-playfair">
+            {solution.title}
+          </h3>
           <div className="w-6 md:w-8 h-6 md:h-8 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition-all duration-300 flex-shrink-0">
             <ArrowRightIcon />
           </div>
-     
+        </div>
       </div>
-    </div>
-       </Link>
+    </Link>
   </div>
 );
 
@@ -122,51 +82,27 @@ const DisplaySolutions: React.FC<DisplaySolutionsProps> = ({
   subtitle = "Versatile LED Products Tailored for Every Space, Purpose, and Performance Need",
   tabsData,
 }) => {
-  const [activeTab, setActiveTab] = useState(tabsData[0]?.id || "all");
-
-  const currentContent =
-    tabsData.find((tab) => tab.id === activeTab) || tabsData[0];
-
-  if (!currentContent) return null; // Handle case where tabsData is empty
+  if (!tabsData || tabsData.length === 0) return null;
 
   return (
     <section className="relative w-full bg-white px-4 md:px-8 lg:px-10 py-5 md:py-10 pt-10">
       <div className="mx-auto">
         {/* Header Section */}
         <div className="flex flex-col gap-3 mb-5">
-          <h2 className="text-3xl md:text-4xl font-medium text-[#0f123f]">
+          <h2 className="text-3xl md:text-4xl font-medium text-heading font-playfair">
             {title}
           </h2>
-          <p className="text-gray-700 text-[15px] md:text-lg">{subtitle}</p>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-2 md:gap-3 justify-center mb-8 md:mb-10 lg:mb-12">
-          {tabsData.map((tab) => (
-            <TabButton
-              key={tab.id}
-              tab={tab}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-            />
-          ))}
+          <p className="text-gray-700 font-playfair text-[15px] md:text-lg">
+            {subtitle}
+          </p>
         </div>
 
         {/* Content Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {currentContent.solutions.map((solution) => (
-            <SolutionCard key={solution.id} solution={solution} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-10">
+          {tabsData.map((solution) => (
+            <SolutionCard key={solution.title} solution={solution} />
           ))}
         </div>
-
-        {/* Show message when no solutions available */}
-        {currentContent.solutions.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
-              No solutions available for this category.
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );
