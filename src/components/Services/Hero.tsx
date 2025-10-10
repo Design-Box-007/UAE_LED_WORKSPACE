@@ -20,10 +20,10 @@ export default function Hero() {
     <section className=" w-full flex flex-col justify-center overflow-hidden bg-gradient-blue-white-downward pt-20 pb-5 md:pt-30">
       {/* Content */}
       <div className="text-center pb-10 px-6 lg:px-2">
-        <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-playfair">
           Innovative LED Displays for Every Need
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 mb-8">
+        <p className="text-lg md:text-xl text-gray-200 mb-8 font-playfair">
           Explore a wide range of high-performance LED solutions tailored <br /> for
           events, advertising, corporate setups, and more.
         </p>

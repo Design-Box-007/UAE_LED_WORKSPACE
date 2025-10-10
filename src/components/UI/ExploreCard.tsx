@@ -20,10 +20,10 @@ const Explore: React.FC<ExploreProps> = ({ insights, heading }) => {
       <div>
         {/* Heading */}
         <div className="flex flex-col items-center lg:items-start md:justify-between mb-6 gap-3 md:gap-0">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-hero tracking-tight text-center lg:text-left">
+          <h2 className="md:text-4xl text-2xl text-heading mb-2.5 tracking-tight text-center lg:text-left font-playfair">
             {heading}
           </h2>
-          <span className="text-sm sm:text-base md:text-lg text-hero font-bold text-center md:text-right">
+          <span className="text-sm sm:text-base md:text-lg text-hero font-bold text-center md:text-right font-playfair">
             Explore the Latest Trends, Tech, and Tips in LED Display Solutions
           </span>
         </div>
@@ -42,7 +42,7 @@ const Explore: React.FC<ExploreProps> = ({ insights, heading }) => {
                 height={250}
                 className="rounded-lg w-full h-52 lg:h-70 object-cover mb-4"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-heading mb-2 font-playfair">
                 {item.title}
               </h3>
               <p className="text-gray-500 text-base sm:text-lg mb-6 flex-grow">

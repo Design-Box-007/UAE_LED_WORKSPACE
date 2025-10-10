@@ -37,7 +37,7 @@ const Navbar = () => {
   const activeColor = getActiveColor(pathName); // shared color
 
   return (
-    <nav className="w-full z-20 px-6 md:px-20 absolute top-0 py-4 bg-transparent flex justify-between items-center">
+    <nav className="w-full z-100 px-6 md:px-20 absolute top-0 py-4 bg-transparent flex justify-between items-center ">
       {/* Logo */}
       <div
         className="text-lg md:text-3xl font-medium tracking-wide"

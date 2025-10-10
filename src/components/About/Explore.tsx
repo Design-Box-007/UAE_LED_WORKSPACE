@@ -26,10 +26,10 @@ const Explore = () => {
       <div>
         {/* Heading */}
         <div className="flex flex-col md:items-center lg:items-start md:justify-between mb-6 gap-3">
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-hero tracking-tight text-center lg:text-left">
+          <h2 className="text-heading md:text-4xl text-2xl font-playfair">
             Insights in LEDs
           </h2>
-          <span className="text-sm sm:text-base md:text-lg text-hero font-bold text-center md:text-right">
+          <span className="text-sm sm:text-base md:text-lg text-heading font-playfair font-bold text-center md:text-right">
             Explore the Latest Trends, Tech, and Tips in LED Display Solutions
           </span>
         </div>
@@ -48,7 +48,7 @@ const Explore = () => {
                 height={250}
                 className="rounded-lg w-full h-52 lg:h-70 object-cover mb-4"
               />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-heading font-playfair mb-2">
                 {item.title}
               </h3>
               <p className="text-gray-500 text-base sm:text-lg mb-6 flex-grow">

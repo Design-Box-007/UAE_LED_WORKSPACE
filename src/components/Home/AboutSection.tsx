@@ -74,35 +74,31 @@ const STATS_DATA: Stat[] = [
 
 // 3. Type the functional component's props
 const StatCard: React.FC<Stat> = ({ text, svg }) => (
-  <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm h-32 md:h-36 flex flex-col">
-    <div className="w-8 md:w-10 h-8 md:h-10 flex items-center justify-center mb-4 md:mb-6">
-      <svg
-        className="w-6 md:w-8 h-6 md:h-8 text-[#0f123f]"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        {svg}
-      </svg>
-    </div>
-    <div className="mt-auto">
-      <p className="font-semibold text-gray-900 text-sm md:text-m leading-tight">
-        {text}
-      </p>
-    </div>
+  <div className="flex items-center gap-2 shadow-2xl bg-white p-10 rounded-2xl">
+    <svg
+      className="w-15 h-10"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      {svg}
+    </svg>
+
+    <p className="font-semibold text-gray-900 text-sm md:text-m leading-tight">
+      {text}
+    </p>
   </div>
 );
 
 // 4. Use React.FC for the main component
 const AboutSection: React.FC = () => {
   return (
-    <section className="relative w-full bg-gray-50 px-5 md:px-10 py-5 lg:py-10">
+    <section className="w-full px-5 md:px-10 py-5 lg:py-10">
       <div className="mx-auto">
-        {/* Header Section */}
         <div className="flex flex-col items-end gap-6 md:gap-8 mb-12 md:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 w-full items-start">
             <div className="text-center lg:text-left">
-              <p className="text-hero font-medium text-xl lg:text-lg mb-3 md:mb-4">
+              <p className="text-hero md:text-4xl text-2xl mb-3 md:mb-4">
                 About Us
               </p>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900 leading-tight">
@@ -139,7 +135,7 @@ const AboutSection: React.FC = () => {
               alt="LED Display Installation"
               width={1080}
               height={720}
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
 
             {/* Learn More Button positioned over the image */}

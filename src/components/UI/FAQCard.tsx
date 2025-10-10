@@ -23,7 +23,7 @@ export default function FAQCard({ faqs, title = "Frequently Asked Questions" }: 
   return (
     <section className="py-8 px-4 lg:px-10">
       <div className="mx-auto">
-        <h2 className="text-2xl md:text-4xl font-semibold text-hero mb-4">
+        <h2 className="text-2xl md:text-4xl font-semibold text-hero mb-4 font-playfair">
           {title}
         </h2>
         <div className="space-y-4">

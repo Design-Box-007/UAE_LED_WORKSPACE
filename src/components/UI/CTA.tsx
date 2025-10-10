@@ -16,7 +16,7 @@ interface CTASectionProps {
   description: string;
   primaryButton: CTAButton;
   secondaryButton?: CTAButton;
-  className?:string
+  className?: string;
 }
 
 // 2. Reusable SVG Icon
@@ -51,7 +51,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   <div className={isSecondary ? "flex-1" : ""}>
     <Link
       href={buttonData.href}
-      className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero px-4 md:px-8 lg:px-12 py-2 md:py-5 lg:py-6 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
+      className="w-full inline-flex items-center justify-between gap-3 bg-white text-hero  md:p-4 p-3 rounded-xl md:rounded-2xl font-medium text-base md:text-lg lg:text-2xl hover:bg-gray-50 transition-all duration-300 group"
     >
       <span>{buttonData.label}</span>
       <ArrowRightIcon />
@@ -72,7 +72,7 @@ const CTA: React.FC<CTASectionProps> = ({
       <div className="mx-auto">
         {/* CTA Card */}
         <div
-          className="rounded-2xl md:rounded-3xl p-8 md:p-12 lg:p-16"
+          className="rounded-2xl md:rounded-3xl p-6 md:p-10"
           style={{
             background: "linear-gradient(180deg, #1F2964 0%, #3F53CA 100%)",
           }}
@@ -80,7 +80,7 @@ const CTA: React.FC<CTASectionProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10 lg:gap-12 items-center text-center lg:text-left">
             {/* Left Column: Main Heading */}
             <div>
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
+              <h2 className="font-playfair text-xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
                 {title}
               </h2>
             </div>

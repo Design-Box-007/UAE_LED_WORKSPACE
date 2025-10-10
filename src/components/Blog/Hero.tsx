@@ -17,14 +17,14 @@ const Hero = () => {
           />
 
           {/* Text Content */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex items-center justify-between">
+          <div className="absolute md:bottom-0 bottom-10 left-0 right-0 p-6 text-white flex items-center justify-between">
             {/* Left Side Text */}
             <div>
               <p className="md:text-[20px]">Featured</p>
-              <h2 className="md:text-[40px] text-[20px] mt-1 font-bold">
+              <h2 className="md:text-[40px] text-[20px] mt-1 font-playfair">
                 Illuminating Ideas: Explore the World of LED Displays
               </h2>
-              <p className="md:text-[24px] mt-2">
+              <p className="md:text-[24px] mt-2 font-playfair">
                 Discover insights, trends, and solutions for events, advertising, and beyond.
               </p>
             </div>

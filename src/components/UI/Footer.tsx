@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer className="relative bg-gray-200 p-10">
-      <div className="mx-auto  relative">
+      <div className="mx-auto relative flex flex-col gap-3">
         {/* 🔹 Social Icons - Top Right */}
         <div className="absolute right-0 top-0 flex items-center gap-4 md:gap-5">
           <a

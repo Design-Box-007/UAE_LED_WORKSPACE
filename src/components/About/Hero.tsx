@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({
       : "justify-end";
 
   return (
-    <section className={`relative w-full pt-30 pb-20 ${bgColor}`}>
+    <section className={`relative w-full pt-30 pb-10 ${bgColor}`}>
       {/* Background Image */}
       <div className="relative w-full rounded-2xl overflow-hidden">
         <Image
@@ -43,14 +43,14 @@ const Hero: React.FC<HeroProps> = ({
           alt="Hero Background"
           width={1200}
           height={600}
-          className="w-full md:h-[650px] object-cover brightness-55"
+          className="w-full md:h-[650px] h-[300px] object-cover brightness-55"
         />
 
         {/* Content */}
         <div
           className={`absolute inset-0 flex ${alignmentClass} items-start lg:items-end px-6 md:px-10 py-10 z-[2]`}
         >
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full gap-6">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full gap-6">
             <h1
               className={`md:text-5xl text-2xl leading-snug font-playfair ${titleColor}`}
             >

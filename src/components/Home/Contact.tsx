@@ -66,7 +66,7 @@ const FormInput: React.FC<FormInputProps> = ({
 // 3. Main Component
 const Contact: React.FC = () => {
   return (
-    <section className="relative w-full bg-gray-50 px-5 md:px-10 py-12 md:py-16 lg:py-20">
+    <section className="relative w-full bg-gray-50 px-5 md:px-10 py-12 md:py-16 lg:py-10">
       <div className="mx-auto">
         {/* Header Section (Uncommented and Integrated) */}
         {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-10 items-start mb-12 md:mb-16 text-center lg:text-left">
@@ -106,12 +106,12 @@ const Contact: React.FC = () => {
         <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 shadow-sm">
           {/* Form Header */}
           <div className="mb-6 md:mb-8 text-center lg:text-left">
-            <h3 className="text-2xl md:text-3xl font-medium text-gray-900 mb-2 md:mb-3">
+            <h3 className="text-2xl md:text-3xl font-medium text-gray-900 mb-2 md:mb-3 font-playfair">
               Book a Free Consultation
             </h3>
-            <p className="text-[#0f123f] text-base md:text-lg font-medium">
-              Reach out today and take the first step towards an **unforgettable
-              experience**.
+            <p className="text-heading text-base md:text-lg font-medium font-playfair">
+              Reach out today and take the first step towards an unforgettable
+              experience.
             </p>
           </div>
 
