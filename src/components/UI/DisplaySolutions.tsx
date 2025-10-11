@@ -45,7 +45,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
           alt={solution.name}
           width={1080}
           height={720}
-          className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-2xl h-[350px]"
+          className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-2xl lg:h-[350px]"
         />
       </div>
       <div className="p-3 md:p-4 bg-white">
