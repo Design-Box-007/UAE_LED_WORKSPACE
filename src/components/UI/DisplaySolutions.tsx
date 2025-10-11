@@ -53,13 +53,13 @@ interface SolutionCardProps {
 const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
   <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2">
     <Link href={`/${formatToHyphenated(solution.name)}/`}>
-      <div className="overflow-hidden rounded-t-xl flex justify-center p-5">
+      <div className="w-full aspect-[4] p-4">
         <Image
           src={solution.image}
           alt={solution.name}
           width={1080}
           height={720}
-          className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-[400px] mx-5 rounded-2xl"
+          className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-2xl h-[400px]"
         />
       </div>
       <div className="p-3 md:p-4 bg-white">
