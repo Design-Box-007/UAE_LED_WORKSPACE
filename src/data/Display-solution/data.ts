@@ -69,7 +69,7 @@ export const tabsData: IService[] = [
         title: "By Display Technology",
         subTitle: "Advanced Display Technology to Match Your Needs",
         description:
-          "No matter the location or layout, our team ensures a professional and safe installation.",
+          "We offer a variety of LED display technologies, each with specific strengths. Whether you're looking for affordability, image precision, or rugged durability, we help you select the most suitable type.",
 
         subfeatures: [
           {
@@ -207,6 +207,10 @@ export const tabsData: IService[] = [
         "Contact us today to get started with your custom LED screen solution.",
       ],
     },
+    emiratesHead:
+      "We provide delivery, installation, and support for indoor LED screens across all major cities and regions in the UAE:",
+    emiratesFoot:
+      "Whether it's a corporate office in Dubai or a museum in Fujairah, we ensure professional installation and on-site support wherever you are.",
   },
   {
     name: "Outdoor LED Screens",
@@ -381,6 +385,10 @@ export const tabsData: IService[] = [
         "Contact us for a free site assessment or customized quote.",
       ],
     },
+    emiratesHead:
+      "We deliver and install outdoor LED screens across the UAE, including:",
+    emiratesFoot:
+      "From the desert heat of Fujairah to the urban landscape of Dubai, our displays are built to last and perform in every environment.",
   },
   {
     name: "LED Video Walls",
@@ -507,6 +515,9 @@ export const tabsData: IService[] = [
         "Contact us today for a free consultation or project quote.",
       ],
     },
+    emiratesHead: "We design, supply, and install LED video walls across:",
+    emiratesFoot:
+      "From compact indoor displays to massive outdoor installations, we provide end-to-end project management — including site evaluation, structural planning, content support, and long-term maintenance.",
   },
   {
     name: "Custom LED Screens",
@@ -757,7 +768,7 @@ export const tabsData: IService[] = [
           },
         ],
         footer:
-          "Advertising kiosks are built for dynamic digital signage and media playback in high-traffic indoor or outdoor environments. These freestanding displays are ideal for real-time promotions, branding, and location-based advertising.",
+          "Generate ad revenue or boost your brand visibility with sleek, media-rich kiosks.",
       },
       {
         title: "Outdoor Digital Kiosks",
@@ -876,5 +887,9 @@ export const tabsData: IService[] = [
         "Get in touch today for a free consultation or proposal.",
       ],
     },
+    emiratesHead:
+      "We supply and install digital kiosk solutions across the UAE, including:",
+    emiratesFoot:
+      "Whether you need a single kiosk or a multi-location rollout, we provide professional support from consultation to deployment and maintenance.",
   },
 ];

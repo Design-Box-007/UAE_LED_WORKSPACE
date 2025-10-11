@@ -35,7 +35,7 @@ const WhatsappButton = ({ number, message }: WhatsappButtonProps) => {
 export default function Hero() {
   return (
     <section className="relative w-full bg-gradient-blue-white-downward px-5 lg:px-10 text-white overflow-hidden md:pt-0 pt-10">
-      <div className="mx-auto py-10 md:py-24 lg:py-32 flex flex-col items-center">
+      <div className="mx-auto py-10 md:py-24 lg:pt-30 flex flex-col items-center">
         {/* Image container */}
         <div className="relative w-full h-[500px] md:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
           {/* Background image */}

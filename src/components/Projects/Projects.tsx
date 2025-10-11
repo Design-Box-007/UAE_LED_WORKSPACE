@@ -4,14 +4,13 @@ import Explore from "./Explore";
 import CTA from "../UI/CTA";
 import { faqs } from "@/data/FAQ/data";
 import Hero from "../About/Hero";
-import images from "@/data/assets";
 import FAQAccordion from "../UI/FAQCard2";
 
 const Projects = () => {
   return (
     <div>
       <Hero
-        image={images.projects.img7}
+        image={"/images/new-images/Project-Landing Page.jpg"}
         title="Real Results in Every Pixel"
         description="From immersive indoor displays to skyline-spanning billboards, explore how LED Display UAE transforms spaces through cutting-edge LED technology."
         position="top"
@@ -27,7 +26,7 @@ const Projects = () => {
         primaryButton={{ label: "Request a Quote", href: "/quote" }}
         className="md:px-10 px-5"
       />
-     <FAQAccordion faqs={faqs}/>
+      <FAQAccordion faqs={faqs} />
     </div>
   );
 };

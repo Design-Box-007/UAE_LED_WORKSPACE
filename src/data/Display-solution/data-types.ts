@@ -23,6 +23,8 @@ export interface IService {
   title: string;
   name: string; // optional, since only the first object uses it
   description: string[];
+  emiratesHead?: string;
+  emiratesFoot?: string;
   image: string;
   features: IFeature[];
   ctaDescription?: string[];

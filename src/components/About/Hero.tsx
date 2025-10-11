@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({
       {/* Background Image */}
       <div className="relative w-full rounded-2xl overflow-hidden">
         <Image
-          src={"/images/new-images/About Us Landing Page.jpg"}
+          src={image}
           alt="Hero Background"
           width={1200}
           height={600}

@@ -1,4 +1,3 @@
-import images from "@/data/assets";
 import Image from "next/image";
 import React from "react";
 // import TrustedPartners from "./Logo";
@@ -30,8 +29,8 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-5 ">
-      <h2 className="md:text-4xl text-2xl text-heading">
+    <section className="flex flex-col gap-5 pt-10">
+      <h2 className="md:text-4xl text-2xl text-heading font-playfair">
         About LED Display UAE
       </h2>
 
@@ -49,7 +48,7 @@ const AboutSection = () => {
         <div className="flex flex-col gap-5 text-justify">
           <ul className="flex flex-col gap-5">
             {aboutContent.map((content, index) => (
-              <li key={index} className="md:text-2xl">
+              <li key={index} className="md:text-2xl font-light">
                 {content.content}
               </li>
             ))}
@@ -59,7 +58,7 @@ const AboutSection = () => {
 
       {/* Trusted By Section */}
       <div className="max-w-6xl mx-auto mt-3 text-center">
-        <span className="text-xl sm:text-2xl md:text-3xl tracking-wide">
+        <span className="text-xl sm:text-2xl md:text-3xl tracking-wide font-playfair">
           Trusted By
         </span>
 

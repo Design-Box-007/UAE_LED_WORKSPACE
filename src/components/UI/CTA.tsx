@@ -68,7 +68,7 @@ const CTA: React.FC<CTASectionProps> = ({
   className,
 }) => {
   return (
-    <section className={`relative w-full py-10 bg-white ${className}`}>
+    <section className={`relative w-full pt-20 bg-white ${className}`}>
       <div className="mx-auto">
         {/* CTA Card */}
         <div

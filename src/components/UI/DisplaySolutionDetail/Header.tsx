@@ -2,41 +2,46 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PageHeaderProps {
-  name: string;
+  image: string;
   title: string;
   description: string[];
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({
-  name,
   title,
   description,
+  image,
 }) => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-16 px-6 md:px-12 lg:px-20 text-center md:text-left">
+    <section className=" pt-25 pb-10 px-5 md:px-10 text-center md:text-left">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="max-w-5xl mx-auto"
       >
-        {/* Small name/tag */}
-        <p className="text-blue-700 uppercase tracking-widest text-sm font-semibold mb-3">
-          {name}
-        </p>
-
         {/* Main title */}
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-snug">
+        <h1 className="text-xl md:text-4xl font-bold text-heading font-playfair mb-6 leading-snug text-left">
           {title}
         </h1>
 
+        <Image
+          src={image}
+          alt={title}
+          width={1080}
+          height={720}
+          className="mb-5 w-full md:h-[600px] rounded-2xl object-cover"
+        />
+
         {/* Description paragraphs */}
-        <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed">
+        <div className="space-y-4 leading-relaxed ">
           {description.map((para, index) => (
-            <p key={index}>{para}</p>
+            <p key={index} className="md:text-2xl font-light text-justify">
+              {para}
+            </p>
           ))}
         </div>
       </motion.div>

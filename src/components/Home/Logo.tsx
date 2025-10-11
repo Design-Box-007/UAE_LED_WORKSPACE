@@ -16,7 +16,7 @@ const Logo = () => {
     { src: "/images/about-us/logo.png", alt: "Logoipsum 9" },
   ];
   return (
-    <div className="px-10 py-10">
+    <div className="px-10 pt-20">
       <div className="flex flex-col gap-2">
         <h1 className="font-playfair md:text-4xl text-2xl text-heading">Our Clients </h1>
         <p className="md:text-xl text-[15px] text-gray-900 font-playfair">Trusted by Leading Brands Across the Region</p>

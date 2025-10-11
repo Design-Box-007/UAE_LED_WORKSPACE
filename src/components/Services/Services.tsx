@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <div>
       <Hero />
-      {/* <DisplaySolutions
+      <DisplaySolutions
         title="Our Display Solutions"
         subtitle={
           <>
@@ -19,7 +19,7 @@ const Services = () => {
           </>
         }
         tabsData={tabsData}
-      /> */}
+      />
       <CTA
         title="Still Not Sure Which LED Display is Right for You?"
         description="Talk to our experts for personalized recommendations based on your event, space, and audience needs."

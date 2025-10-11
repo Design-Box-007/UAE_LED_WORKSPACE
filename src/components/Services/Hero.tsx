@@ -5,16 +5,15 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
-import images from "@/data/assets";
 
 export default function Hero() {
   const slides = [
-    images.service.img1,
-    images.service.img2,
-    images.service.img3,
+    "/images/new-images/Homepage-Custom Led Screen.jpg",
+    "/images/new-images/Homepage-Digital Kiosk.jpg",
+    "/images/new-images/Homepage-Indoor LEd screens.jpg",
+    "/images/new-images/Homepage-Led Video Wall.jpg",
+    "/images/new-images/Homepage-Outdoor Led screen.jpg",
   ];
-
-  
 
   return (
     <section className=" w-full flex flex-col justify-center overflow-hidden bg-gradient-blue-white-downward pt-20 pb-5 md:pt-30">
@@ -24,11 +23,11 @@ export default function Hero() {
           Innovative LED Displays for Every Need
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-8 font-playfair">
-          Explore a wide range of high-performance LED solutions tailored <br /> for
-          events, advertising, corporate setups, and more.
+          Explore a wide range of high-performance LED solutions tailored <br />{" "}
+          for events, advertising, corporate setups, and more.
         </p>
         <button className="px-6 py-3 rounded-full bg-white font-semibold shadow-md hover:bg-gray-100 transition">
-          Explore Our Products 
+          Explore Our Products
         </button>
       </div>
 
@@ -43,23 +42,26 @@ export default function Hero() {
           modules={[Autoplay, Pagination]}
           className="rounded-2xl overflow-hidden shadow-2xl"
           breakpoints={{
-            0:{
+            0: {
               slidesPerView: 1,
             },
-            768:{
+            768: {
               slidesPerView: 2,
             },
           }}
         >
           {slides.map((src, index) => (
-            <SwiperSlide key={index} className="flex justify-center lg:p-0 px-10">
+            <SwiperSlide
+              key={index}
+              className="flex justify-center lg:p-0 px-10"
+            >
               <div className="transition-all duration-500">
                 <Image
                   src={src}
                   alt={`LED Display ${index}`}
                   width={1025}
                   height={720}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-[300px] md:h-[400px] object-cover rounded-xl"
                 />
               </div>
             </SwiperSlide>

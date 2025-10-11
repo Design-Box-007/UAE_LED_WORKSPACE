@@ -2,8 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
-const ServingEmirates = () => {
+interface FooterContentProps {
+  header?: string;
+  footer?: string;
+}
+const ServingEmirates: React.FC<FooterContentProps> = ({ header, footer }) => {
   const locations = [
     "Dubai",
     "Abu Dhabi",
@@ -15,31 +18,27 @@ const ServingEmirates = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-20 text-center md:text-left">
+    <section className="md:px-10 px-5 py-5">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="max-w-5xl mx-auto space-y-6"
       >
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
+        <h2 className="text-xl md:text-4xl text-heading font-playfair font-bold mb-3">
           Serving All Emirates
         </h2>
 
         {/* Description */}
-        <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-          We supply and install digital kiosk solutions across the UAE,
-          including:
-        </p>
+        <p className="font-playfair md:text-xl leading-relaxed">{header}</p>
 
         {/* Locations List */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-4 text-gray-800 font-medium">
+        <ul className="flex flex-col gap-3 mt-3">
           {locations.map((location, index) => (
             <li
               key={index}
-              className="before:content-['•'] before:text-blue-600 before:mr-2"
+              className="before:content-['•'] before:mr-2 md:text-xl text-[15px] font-light"
             >
               {location}
             </li>
@@ -47,10 +46,8 @@ const ServingEmirates = () => {
         </ul>
 
         {/* Footer Description */}
-        <p className="mt-6 text-gray-700 text-base md:text-lg leading-relaxed">
-          Whether you need a single kiosk or a multi-location rollout, we
-          provide professional support from consultation to deployment and
-          maintenance.
+        <p className="mt-6 text-heading font-playfair italic md:text-2xl leading-relaxed">
+          {footer}
         </p>
       </motion.div>
     </section>

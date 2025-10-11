@@ -16,7 +16,7 @@ const FAQAccordion: React.FC<{ faqs: FAQItem[] }> = ({ faqs }) => {
   };
 
   return (
-    <div className="p-4 w-full space-y-10 my-5 bg-white md:px-10 px-5">
+    <div className="p-4 w-full space-y-10 my-5 bg-white md:px-10 px-5 pt-10">
       <h2 className="lg:text-5xl md:text-3xl text-2xl font-medium text-heading font-playfair">
         Frequently Asked Questions
       </h2>

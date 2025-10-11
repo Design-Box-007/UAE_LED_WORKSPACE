@@ -40,7 +40,7 @@ const OurWork2: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="w-full px-5 md:px-10 py-10">
+    <section className="w-full px-5 md:px-10 pt-10">
       <div className="flex flex-col gap-8 w-full">
         {/* Header */}
         <div className="flex flex-col lg:flex-row md:justify-between items-center gap-3">

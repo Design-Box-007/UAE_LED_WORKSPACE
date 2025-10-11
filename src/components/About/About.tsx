@@ -1,16 +1,14 @@
-
 import AboutSection from "./AboutSection";
 import Explore from "./Explore";
 import Hero from "./Hero";
 import WhyChooseUs from "./WhyChooseUs";
 import CTA from "../UI/CTA";
-import images from "@/data/assets";
 
 const About = () => {
   return (
     <div className="px-5 md:px-10">
       <Hero
-        image={images.aboutUs.img5}
+        image={"/images/new-images/About Us Landing Page.jpg"}
         title="Illuminating Ideas, Elevating Experiences"
         description="Your Trusted Partner for Next-Gen LED Display Solutions"
         position="top"

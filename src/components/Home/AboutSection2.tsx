@@ -1,4 +1,3 @@
-import images from "@/data/assets";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -85,7 +84,7 @@ const AboutSection2 = () => {
     </div>
   );
   return (
-    <section className="flex flex-col lg:flex-row items-end justify-between gap-8 px-5 md:px-10 py-10">
+    <section className="flex flex-col lg:flex-row items-end justify-between gap-8 px-5 md:px-10 pt-10">
       {/* LEFT: Stats Section */}
 
       {/* RIGHT: About Content */}
@@ -101,7 +100,7 @@ const AboutSection2 = () => {
         </div>
 
         {/* Description */}
-        <p className="leading-relaxed text-gray-600 lg:text-left text-justify">
+        <p className="leading-relaxed text-gray-600 text-justify">
           LED Display UAE is a leading provider of innovative LED screen and
           display solutions, helping brands, agencies, and event organizers
           deliver unforgettable visual experiences. From compact digital kiosks

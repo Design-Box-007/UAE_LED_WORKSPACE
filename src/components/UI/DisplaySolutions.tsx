@@ -1,11 +1,10 @@
 "use client";
 
-import { ReactNode } from "react";
+import { useState, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { formatToHyphenated } from "@/utils/utils";
 
-// 1. Types for Data Structure
 interface SolutionCardData {
   name: string;
   image: string;
@@ -16,17 +15,6 @@ interface DisplaySolutionsProps {
   subtitle?: ReactNode;
   tabsData: SolutionCardData[];
 }
-
-// 2. Reusable Icons
-// const CheckCircleIcon: React.FC = () => (
-//   <svg
-//     className="w-3 md:w-4 h-3 md:h-4"
-//     fill="currentColor"
-//     viewBox="0 0 20 20"
-//   >
-//     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-//   </svg>
-// );
 
 const ArrowRightIcon: React.FC = () => (
   <svg
@@ -44,8 +32,6 @@ const ArrowRightIcon: React.FC = () => (
   </svg>
 );
 
-// 3. Extracted Components
-
 interface SolutionCardProps {
   solution: SolutionCardData;
 }
@@ -59,7 +45,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
           alt={solution.name}
           width={1080}
           height={720}
-          className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-2xl h-[400px]"
+          className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-2xl h-[350px]"
         />
       </div>
       <div className="p-3 md:p-4 bg-white">
@@ -76,18 +62,37 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
   </div>
 );
 
-// 4. Main Component
 const DisplaySolutions: React.FC<DisplaySolutionsProps> = ({
   title = "Our Display Solutions",
   subtitle = "Versatile LED Products Tailored for Every Space, Purpose, and Performance Need",
   tabsData,
 }) => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  // ✅ 5 categories
+  const categories = [
+    "All",
+    "Indoor LED Screens",
+    "Outdoor LED Screens",
+    "LED Video Walls",
+    "Custom LED Screens",
+    "Digital Kiosks",
+  ];
+
+  // ✅ Filter by checking if category text appears in the name
+  const filteredSolutions =
+    activeCategory === "All"
+      ? tabsData
+      : tabsData.filter((solution) =>
+          solution.name.toLowerCase().includes(activeCategory.toLowerCase())
+        );
+
   if (!tabsData || tabsData.length === 0) return null;
 
   return (
-    <section className="relative w-full bg-white px-4 md:px-8 lg:px-10 py-5 md:py-10 pt-10">
+    <section className="relative w-full bg-white px-4 md:px-8 lg:px-10 pt-20">
       <div className="mx-auto">
-        {/* Header Section */}
+        {/* Header */}
         <div className="flex flex-col gap-3 mb-5">
           <h2 className="text-3xl md:text-4xl font-medium text-heading font-playfair">
             {title}
@@ -97,12 +102,35 @@ const DisplaySolutions: React.FC<DisplaySolutionsProps> = ({
           </p>
         </div>
 
-        {/* Content Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-10">
-          {tabsData.map((solution) => (
+        {/* ✅ Category Buttons */}
+        <div className="flex flex-wrap gap-3 mt-6 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-[10px] border transition-all duration-300 ${
+                activeCategory === cat
+                  ? "bg-gray-900 text-white border-gray-900"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* ✅ Filtered Solutions */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
+          {filteredSolutions.map((solution) => (
             <SolutionCard key={solution.name} solution={solution} />
           ))}
         </div>
+
+        {filteredSolutions.length === 0 && (
+          <p className="text-center text-gray-500 mt-10">
+            No matching solutions found.
+          </p>
+        )}
       </div>
     </section>
   );
