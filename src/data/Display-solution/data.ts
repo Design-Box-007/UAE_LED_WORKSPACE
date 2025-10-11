@@ -510,7 +510,7 @@ export const tabsData: IService[] = [
   },
   {
     name: "Custom LED Screens",
-    image: "",
+    image: "/images/new-images/Homepage-Custom Led Screen.jpg",
     title: "Custom LED Screens – Dubai, Abu Dhabi, Fujairah & Ras Al Khaimah",
     description: [
       "Bring your creative vision to life with fully custom LED screen solutions tailored for any space, shape, or purpose. We specialize in designing, fabricating, and installing non-standard, high-impact LED displays for businesses, brands, and venues across Dubai, Abu Dhabi, Fujairah, Ras Al Khaimah, and the wider UAE.",
