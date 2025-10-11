@@ -210,7 +210,7 @@ export const tabsData: IService[] = [
   },
   {
     name: "Outdoor LED Screens",
-    image: "",
+    image: "/images/new-images/Homepage-Outdoor Led screen.jpg",
     title: "Outdoor LED Screens – Dubai, Abu Dhabi, Fujairah & Ras Al Khaimah",
     description: [
       "Make a powerful impact with high-performance outdoor LED screen solutions tailored for the UAE climate and visibility requirements. Whether you're advertising in the heart of Dubai, hosting an event in Abu Dhabi, promoting a brand in Fujairah, or managing a venue in Ras Al Khaimah, we deliver rugged, weatherproof, and high-brightness outdoor LED displays built to perform — day and night.",
