@@ -38,7 +38,7 @@ const AboutSection = () => {
       <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-10 items-center">
         <div className="w-full h-full">
           <Image
-            src={images.aboutUs.img1}
+            src={"/images/new-images/About Us Page- About us section.jpg"}
             alt="LED Display UAE"
             width={600}
             height={350}
