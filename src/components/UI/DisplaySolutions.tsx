@@ -7,7 +7,7 @@ import { formatToHyphenated } from "@/utils/utils";
 
 // 1. Types for Data Structure
 interface SolutionCardData {
-  title: string;
+  name: string;
   image: string;
 }
 
@@ -52,11 +52,11 @@ interface SolutionCardProps {
 
 const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
   <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2">
-    <Link href={`/${formatToHyphenated(solution.title)}/`}>
+    <Link href={`/${formatToHyphenated(solution.name)}/`}>
       <div className="overflow-hidden rounded-t-xl flex justify-center p-5">
         <Image
           src={solution.image}
-          alt={solution.title}
+          alt={solution.name}
           width={1080}
           height={720}
           className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-[400px] mx-5 rounded-2xl"
@@ -65,7 +65,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ solution }) => (
       <div className="p-3 md:p-4 bg-white">
         <div className="flex items-center justify-between">
           <h3 className="text-base md:text-lg font-semibold text-heading font-playfair">
-            {solution.title}
+            {solution.name}
           </h3>
           <div className="w-6 md:w-8 h-6 md:h-8 bg-gray-900 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition-all duration-300 flex-shrink-0">
             <ArrowRightIcon />
@@ -100,7 +100,7 @@ const DisplaySolutions: React.FC<DisplaySolutionsProps> = ({
         {/* Content Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-10">
           {tabsData.map((solution) => (
-            <SolutionCard key={solution.title} solution={solution} />
+            <SolutionCard key={solution.name} solution={solution} />
           ))}
         </div>
       </div>

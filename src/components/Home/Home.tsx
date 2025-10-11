@@ -4,10 +4,11 @@ import Hero from "./Hero";
 import Contact from "./Contact";
 import CTA from "../UI/CTA";
 import DisplaySolutions from "../UI/DisplaySolutions";
-import { tabsData } from "@/data/Display-solution/data";
+ 
 import AboutSection2 from "./AboutSection2";
 import OurWork2 from "./OurWork2";
 import Logo from "./Logo";
+import { tabsData } from "@/data/Display-solution/data";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
         subtitle={"We provide end to end support for all types LED screens"}
         tabsData={tabsData}
       />
-      {/* <OurWork /> */}
+      {/* <OurWork /> */}``
       <OurWork2 />
       {/* <Testimonial /> */}
       <Logo />
