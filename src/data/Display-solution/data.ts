@@ -698,7 +698,7 @@ export const tabsData: IService[] = [
   },
   {
     name: "Digital Kiosks",
-    image: "",
+    image: "/images/new-images/Homepage-Digital Kiosk.jpg",
     title: "Digital Kiosks – Dubai, Abu Dhabi, Fujairah & Ras Al Khaimah",
     description: [
       "Empower customer interaction, brand engagement, and public service with state-of-the-art digital kiosk solutions across the UAE. Whether you need an interactive touchscreen kiosk in a mall in Dubai or a weatherproof outdoor kiosk in Fujairah, we offer end-to-end solutions designed for performance, durability, and user experience.",
