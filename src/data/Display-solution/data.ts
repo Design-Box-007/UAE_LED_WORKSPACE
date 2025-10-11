@@ -384,7 +384,7 @@ export const tabsData: IService[] = [
   },
   {
     name: "LED Video Walls",
-    image: "",
+    image: "/images/new-images/Homepage-Led Video Wall.jpg",
     title: "LED Video Walls – Dubai, Abu Dhabi, Fujairah & Ras Al Khaimah",
     description: [
       "We deliver high-performance LED video wall solutions across Dubai, Abu Dhabi, Fujairah, Ras Al Khaimah, and the entire UAE — engineered for immersive visuals, seamless scalability, and long-term reliability. Whether you need an indoor display for a corporate setting, a curved screen for an event, or an interactive wall for audience engagement, we offer full design-to-installation service tailored to your needs.",
