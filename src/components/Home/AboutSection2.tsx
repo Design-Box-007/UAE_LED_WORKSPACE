@@ -116,7 +116,7 @@ const AboutSection2 = () => {
         {/* Image with overlay button */}
         <div className="relative w-full h-[260px] sm:h-[320px] md:h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src={images.aboutUs.img1}
+            src={"/images/new-images/Homepage-About Us Image.jpg"}
             alt="LED Display Installation"
             width={1080}
             height={720}
