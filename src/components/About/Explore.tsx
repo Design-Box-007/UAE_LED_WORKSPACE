@@ -1,24 +1,8 @@
-import images from "@/data/assets";
+import { Aboutinsights } from "@/data/Explore/data";
+import { formatToHyphenated } from "@/utils/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-
-const insights = [
-  {
-    image: images.aboutUs.img4,
-    title: "Top 5 LED Display Trends for 2024",
-    desc: "Learn about the cutting-edge innovations shaping the future of LED displays for every occasion.",
-  },
-  {
-    image: images.aboutUs.img3,
-    title: "The Future of Outdoor LED Walls",
-    desc: "Discover how outdoor LED displays are transforming events, retail, and public spaces worldwide.",
-  },
-  {
-    image: images.aboutUs.img2,
-    title: "How to Choose the Right LED Display",
-    desc: "Practical tips for picking the perfect LED solution for your unique needs and environment.",
-  },
-];
 
 const Explore = () => {
   return (
@@ -36,7 +20,7 @@ const Explore = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {insights.map((item, idx) => (
+          {Aboutinsights.map((item, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col"
@@ -54,9 +38,11 @@ const Explore = () => {
               <p className="text-gray-500 text-base sm:text-lg mb-6 flex-grow">
                 {item.desc}
               </p>
-              <button className="bg-gray-100 rounded-lg py-3 px-4 font-medium text-gray-900 transition hover:bg-gray-200 w-full">
-                Read More
-              </button>
+              <Link href={`about/${formatToHyphenated(item.title)}/`}>
+                <button className="bg-gray-100 rounded-lg py-3 px-4 font-medium text-gray-900 transition hover:bg-gray-200 w-full">
+                  Read More
+                </button>
+              </Link>
             </div>
           ))}
         </div>

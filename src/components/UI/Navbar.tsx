@@ -109,6 +109,13 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href={"/contact"} onClick={() => setMenuOpen(false)}>
+                <button className="bg-primary text-background p-2 rounded-full hover:opacity-90 transition flex items-center gap-1.5">
+                  Contact US <FaPhone size={16} />
+                </button>
+              </Link>
+            </li>
           </ul>
         </div>
       )}

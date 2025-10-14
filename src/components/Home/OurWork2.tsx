@@ -1,5 +1,4 @@
 "use client";
-
 import images from "@/data/assets";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +95,7 @@ const OurWork2: React.FC = () => {
               // Dummy YouTube video embed
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1"
+                src="/video/UAE-video.mp4"
                 title="YouTube Video"
                 allow="autoplay; encrypted-media"
                 allowFullScreen

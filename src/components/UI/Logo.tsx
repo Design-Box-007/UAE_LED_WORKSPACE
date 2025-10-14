@@ -19,7 +19,7 @@ const MarqueeLogos: React.FC<MarqueeLogosProps> = ({
 }) => {
   return (
     <div className="w-full py-6 space-y-4">
-      <h5 className="text-xl sm:text-2xl lg:text-3xl font-medium text-custom-red-light font-poppins text-center font-playfair">
+      <h5 className="text-xl sm:text-2xl lg:text-3xl font-medium text-custom-red-light text-center font-playfair">
         {title}
       </h5>
 
