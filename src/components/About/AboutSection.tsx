@@ -3,19 +3,19 @@ import React from "react";
 // import TrustedPartners from "./Logo";
 
 const AboutSection = () => {
-  const logos1 = [
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 1" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 2" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 3" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 4" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 5" },
-  ];
-  const logos2 = [
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 6" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 7" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 8" },
-    { src: "/images/about-us/logo.png", alt: "Logoipsum 9" },
-  ];
+  // const logos1 = [
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 1" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 2" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 3" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 4" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 5" },
+  // ];
+  // const logos2 = [
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 6" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 7" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 8" },
+  //   { src: "/images/about-us/logo.png", alt: "Logoipsum 9" },
+  // ];
 
   const aboutContent = [
     {
@@ -57,7 +57,7 @@ const AboutSection = () => {
       </div>
 
       {/* Trusted By Section */}
-      <div className="max-w-6xl mx-auto mt-3 text-center">
+      {/* <div className="max-w-6xl mx-auto mt-3 text-center">
         <span className="text-xl sm:text-2xl md:text-3xl tracking-wide font-playfair">
           Trusted By
         </span>
@@ -81,7 +81,7 @@ const AboutSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* <TrustedPartners /> */}
     </section>
   );

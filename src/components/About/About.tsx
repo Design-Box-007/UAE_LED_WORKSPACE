@@ -3,6 +3,7 @@ import Explore from "./Explore";
 import Hero from "./Hero";
 import WhyChooseUs from "./WhyChooseUs";
 import CTA from "../UI/CTA";
+import Logo from "../Home/Logo";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
         descColor="text-gray-200"
       />
       <AboutSection />
+      <Logo />
       <WhyChooseUs />
       <CTA
         title="Let’s Light Up Your Next Experience"
